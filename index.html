@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    .buttonSubmit{
+    background-color: #308a2a;
+    color: #fff;
+}
+    </style>
+   </head>
+<body>
+    <div class="container2">
+        <img src="" alt="">
+    </div>
+    <div class="container">
+        <h2>Cadastro</h2>
+        <form id="cadastroForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <button class="buttonSubmit" type="submit">Cadastrar</button>
+
+            <button class="social-button google-button" onclick="cadastroComGoogle()">Cadastrar com Google</button>
+            <button class="social-button facebook-button" onclick="cadastroComFacebook()">Cadastrar com Facebook</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+         
+            var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var senha = document.getElementById('senha').value;
+
+            
+            console.log('Nome: ' + nome);
+            console.log('E-mail: ' + email);
+            console.log('Senha: ' + senha);
+        });
+        function cadastroComGoogle() {
+            console.log('Realizar cadastro com Google');
+           
+        }
+
+        function cadastroComFacebook() {
+            console.log('Realizar cadastro com Facebook');
+           
+        }
+    </script>
+</body>
+</html>
